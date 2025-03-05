@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='syle_home.css')}}">
+    <title>home</title>
+</head>
+<body>
+
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('login') }}" class="btn2">Login</a></li>
+            <li><a href="{{ url_for('registrar') }}" class="btn">Registrar</a></li>
+            
+        </ul>
+    </nav>
+
+
+    <div>
+    {% if current_user.is_authenticated %}
+        <h1> Você esta logado</h1>
+        <h1> Bem vindo, {{current_user.nome}}</h1>
+    {% else %}
+        <h1>Você Não esta logado.</h1>
+        <p>Faça o login ou registre-se</p>
+    {% endif %}
+    </div>
+    
+</body>
+</html>

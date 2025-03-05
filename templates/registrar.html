@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_registro.css')}}">
+</head>
+<body>
+        <form action="" method="post">
+        <div div class="form">
+
+            <h1>Registro</h1>
+            
+
+            <label for="nome">Usuario</label>
+            <input type="text" name="nomeForm" placeholder="Digite um nome para usuario" id="">
+
+            <label  for="nome">Senha</label> 
+            <input type="number" name="senhaForm" placeholder="Digite uma Senha" id="">
+
+            <input type="submit" value="Registrar">
+            
+            {% if erro %}
+            <div class="alert alert-danger"> 
+                {{ erro }}
+            </div>
+        {% endif %}
+        </div>
+        </form>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='style_login.css')}}">
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="" method="post">
+        <div class="form">
+            <label for="nome">Usuario</label> 
+            <input type="text" name="nomeForm" placeholder="Digite o seu Usuario.." id="">
+
+            <label  for="nome">Senha</label> 
+            <input type="number" name="senhaForm" placeholder="Sua senha..." id="">
+
+            <input type="submit" value="Entrar">
+
+            {% if erro%}
+                <div class="alert-danger">
+                    {{ erro }}
+                </div>
+            {% endif %}
+
+        </div>
+
+
+        
+    </form>
+</body>
+</html>
